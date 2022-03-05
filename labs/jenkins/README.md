@@ -160,14 +160,14 @@ Browse to the Jenkins homepage and select _Open Blue Ocean_ from the left nav. Y
 
 We'll create a new pipeline job instead. Browse back to main Blue Ocean UI at http://localhost:8080/blue and click _New pipeline_.
 
-📋 Set up the new pipeline to connect to your Git server, running at http://gogs:3000/ashishjuyal/demo.git - it uses the same credentials as Jenkins.
+📋 Set up the new pipeline to connect to your Git server, running at http://gogs:3000/thecodecamp/demo.git - it uses the same credentials as Jenkins.
 
 <details>
   <summary>Not sure how?</summary>
 
 - Select _Git_ in the source code list (not _GitHub_! we're using our own Git server)
 
-- Set the _Repository URL_ to http://gogs:3000/ashishjuyal/demo.git 
+- Set the _Repository URL_ to http://gogs:3000/thecodecamp/demo.git 
 
 - Set _Username_ to `thecodecamp` and _Password_ to `student`
 
@@ -197,7 +197,7 @@ javac --version
 
 Click _Save_ and then _Save & run_. Jenkins creates the pipeline definition and uploads it to the Git server. Wait a moment and the build will automatically start. The build should succeed - check the output to see the message.
 
-📋 Browse to your Git repo at http://localhost:3000/ashishjuyal/demo - where is the build definition stored?
+📋 Browse to your Git repo at http://localhost:3000/thecodecamp/demo - where is the build definition stored?
 
 <details>
   <summary>Not sure?</summary>
@@ -227,14 +227,14 @@ Open Gogs at http://localhost:3000 and sign in with username `thecodecamp` and p
 Now you can add your local Gogs server as a remote for the course repo, and push the contents:
 
 ```
-git remote add gogs http://localhost:3000/ashishjuyal/devops.git
+git remote add gogs http://localhost:3000/thecodecamp/devops.git
 
 git push gogs master
 ```
 
 > You'll need to log in with your Git client - use the usual credentials.
 
-Check the repo at http://localhost:3000/ashishjuyal/devops, and you'll see all the lab content. This is like your own private GitHub.
+Check the repo at http://localhost:3000/thecodecamp/devops, and you'll see all the lab content. This is like your own private GitHub.
 
 Browse back to Jenkins at http://localhost:8080/view/all/newJob to create a new job:
 
@@ -248,7 +248,7 @@ This is the classic UI - you can still use it to work with new pipelines. Scroll
 
 - select _Pipeline script from SCM_ in the dropdown
 - set the SCM to _Git_
-- set the _Repository URL_ to `http://gogs:3000/ashishjuyal/devops.git`
+- set the _Repository URL_ to `http://gogs:3000/thecodecamp/devops.git`
 - set the _Script Path_ to `labs/jenkins/manual-gate/Jenkinsfile`
 
 You will receive an authentication error when configuring the repository URL
