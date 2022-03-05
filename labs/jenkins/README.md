@@ -229,7 +229,7 @@ Now you can add your local Gogs server as a remote for the course repo, and push
 ```
 git remote add gogs http://localhost:3000/thecodecamp/devops.git
 
-git push gogs master
+git push gogs main
 ```
 
 > You'll need to log in with your Git client - use the usual credentials.
